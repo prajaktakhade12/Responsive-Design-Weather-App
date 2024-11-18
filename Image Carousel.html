@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousel</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #94efe3;
+    }
+
+    .carousel {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .images img {
+      width: 300px;
+      height: 200px;
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="images" id="carouselImages">
+      <img src="1.webp" alt="Image 1">
+      <img src="2.webp" alt="Image 2">
+      <img src="3.webp" alt="Image 3">
+      <img src="4.webp" alt="Image 4">
+    </div>
+    <button class="prev" onclick="prevImage()">&#9664;</button>
+    <button class="next" onclick="nextImage()">&#9654;</button>
+  </div>
+
+  <script>
+    let index = 0;
+
+    function showImage() {
+      const images = document.getElementById('carouselImages');
+      images.style.transform = `translateX(${-index * 300}px)`;
+    }
+
+    function nextImage() {
+      if (index < 3) {
+        index++;
+        showImage();
+      }
+    }
+
+    function prevImage() {
+      if (index > 0) {
+        index--;
+        showImage();
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: #3b5998;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        .blog-title {
+            font-size: 2rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .content {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .main-content, .sidebar {
+            padding: 1rem;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0.5rem;
+            }
+            .content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.2rem;
+                padding: 0.8rem;
+            }
+            .blog-title {
+                font-size: 1.8rem;
+            }
+            .main-content, .sidebar {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1rem;
+                padding: 0.6rem;
+            }
+            .blog-title {
+                font-size: 1.5rem;
+            }
+            .main-content, .sidebar {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Wanderlust Adventures</h1>
+</header>
+
+<div class="container">
+    <div class="blog-title">Exploring the Hidden Gems of the World</div>
+    
+    <div class="content">
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>Discover Exotic Destinations</h2>
+            <p>From the lush landscapes of Bali to the ancient temples of Kyoto, travel offers a window into worlds unlike our own. Visiting these destinations allows us to step into different cultures, explore breathtaking landscapes, and create unforgettable memories.</p>
+            <p>Whether it's hiking through the mountains of New Zealand, experiencing the vibrant street life in Marrakech, or relaxing on the pristine beaches of the Maldives, each destination has something unique to offer. Travel not only satisfies our wanderlust but also broadens our perspectives, helping us appreciate the diversity and beauty of our world.</p>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Popular Destinations</h3>
+            <ul>
+                <li>Paris, France</li>
+                <li>Kyoto, Japan</li>
+                <li>New York, USA</li>
+                <li>Cape Town, South Africa</li>
+                <li>Sydney, Australia</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
